@@ -1,0 +1,181 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Applied_project.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<title>Club Management</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image:url(slide04.jpg);
+}
+
+/* Style the header */
+header {
+  padding: 30px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  background-color:#F39C12;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  padding: 8px 8px 8px 32px;
+  font-size: 20px;
+  color:#818181;
+  text-decoration: none;
+}
+nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+article {
+  padding: 20px;
+  height:650px;
+  background: #ebf9f9;
+  opacity:0.9;
+}
+
+/* Style the footer */
+footer {
+  height:130px;
+  color:white;
+  padding: 25px;
+  text-align: center;
+  font-size: 20px;
+  background-color:black;
+  opacity:0.9;
+}
+
+/* style for textbox */
+input,date[type=text] {
+    padding: 4px 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width:240px;
+    height:30px;
+}
+
+/* style for button */
+.button {
+    background-color: mediumseagreen;
+    border: none;
+    color: white;
+    padding: 2px 25px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 15px;
+    width:120px;
+}
+.DropDownList{
+    padding: 4px 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width:240px;
+    height:30px;
+}
+
+.mycheckbox input[type='checkbox']
+{
+    margin-left:10px;
+    width: 20px;
+}
+
+.btn {
+  background-color: RoyalBlue;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: dodgerblue;
+}
+.button:hover {
+  background-color: limegreen;
+}
+nav a:hover{
+    color: white;
+    text-decoration:none;
+}
+
+/*Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    @media (max-width: 600px) {
+        nav, article {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+</style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-12">
+    <p style="float: right; margin-right:20px; margin-top:3px; font-size:20px;">
+            <a href="../WebForm1.aspx" style="float: right; color: #000000">Logout</a></p>
+
+<header>    
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>        
+</header>
+    </div>
+    </div>
+
+ <div class="row">
+        <div class="col-md-3">
+  <nav>   
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+  </nav>
+ </div>
+   <div class="col-md-9">
+    <article>      
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server"></asp:ContentPlaceHolder>
+    </article>
+  </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+<footer>
+   <p>Program Name: CSAT-CSAC
+      <br />
+Project Code: CPL-555-CSAT-CSAC-0087-V2
+</p>
+    </footer>
+ </div>
+    </div>
+</div>
+</body>
+</html>
